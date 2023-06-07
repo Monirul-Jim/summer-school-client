@@ -10,7 +10,7 @@ const InstructorCard = ({category}) => {
                 <p>Classes:{classes}</p>
                 <p className="text-2xl">Total Classes:</p>
                 {
-                    take_classes.map(item=><p key={item._id}>{item}</p>)
+                    take_classes.map(item=><p key={item.id}>{item}</p>)
                 }
                 {/* <p>Take Classes: {take_classes}</p> */}
                 <div className="card-actions justify-end">

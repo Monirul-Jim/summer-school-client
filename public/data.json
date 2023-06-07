@@ -102,42 +102,49 @@
     "totalStudents": 90
   },
   {
+    "id":13,
     "name": "John Smith",
     "rating": 5,
     "description": "The school sports academy has been instrumental in developing my skills as an athlete. The coaches are knowledgeable and supportive, and the facilities are top-notch. I highly recommend it!",
     "category": "testimonials"
   },
   {
+    "id":14,
     "name": "Emily Johnson",
     "rating": 4,
     "description": "Attending the school sports academy has been an incredible experience. The training programs are intense but rewarding. The academy has helped me improve my performance and achieve my goals.",
     "category": "testimonials"
   },
   {
+    "id":15,
     "name": "Michael Anderson",
     "rating": 4.5,
     "description": "I have had the privilege of being part of the school sports academy for the past two years, and it has been transformative. The coaches push me to my limits and help me reach new heights. I am grateful for the opportunities it has provided me.",
     "category": "testimonials"
   },
   {
+    "id":16,
     "name": "Sarah Thompson",
     "rating": 5,
     "description": "Enrolling in the school sports academy was the best decision I ever made. The coaching staff is exceptional and truly cares about the athletes' development. I have seen remarkable progress in my skills and overall athleticism.",
     "category": "testimonials"
   },
   {
+    "id":17,
     "name": "David Wilson",
     "rating": 4.5,
     "description": "The school sports academy offers a comprehensive program that covers all aspects of sports training. The coaches focus on technique, strategy, and physical conditioning. I have gained invaluable knowledge and experience through this academy.",
     "category": "testimonials"
   },
   {
+    "id":18,
     "name": "Olivia Davis",
     "rating": 5,
     "description": "I owe a great deal of my success as an athlete to the school sports academy. The personalized attention and guidance from the coaches have helped me overcome challenges and achieve remarkable results. I can't thank them enough!",
     "category": "testimonials"
   },
   {
+    "id":19,
     "Image": "https://media.istockphoto.com/id/1368477551/photo/young-smiling-athlete-in-public-park.jpg?s=1024x1024&w=is&k=20&c=gfaptwMzTgxbgEUQK7YpA81qZHu5DYJu6aWcsMKPzPo=",
     "Name": "John Smith",
     "Email": "john.smith@example.com",
@@ -146,6 +153,7 @@
     "category":"instructor"
   },
   {
+    "id":20,
     "Image": "https://media.istockphoto.com/id/1440149713/photo/black-man-tablet-and-smile-for-social-media-post-shopping-online-or-browsing-internet.jpg?s=1024x1024&w=is&k=20&c=deMApX3LFnvQvqumEv5xxPjzkZgtJe_5zIak09Bxj80=",
     "Name": "Emily Johnson",
     "Email": "emily.johnson@example.com",
@@ -154,6 +162,7 @@
     "category":"instructor"
   },
   {
+    "id":21,
     "Image": "https://media.istockphoto.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=1024x1024&w=is&k=20&c=jts1sdkLPskbbDU4_k56chBuOaxhqJGofM64c8VEUpM=",
     "Name": "Michael Davis",
     "Email": "michael.davis@example.com",
@@ -162,6 +171,7 @@
     "category":"instructor"
   },
   {
+    "id":22,
     "Image": "https://media.istockphoto.com/id/1485546774/photo/bald-man-smiling-at-camera-standing-with-arms-crossed.jpg?s=1024x1024&w=is&k=20&c=zvw6qDmYHmIvvCbEn2ZUF0tdSbKPnEWRsVAzd9g4hCM=",
     "Name": "Jessica Wilson",
     "Email": "jessica.wilson@example.com",
@@ -170,6 +180,7 @@
     "category":"instructor"
   },
   {
+    "id":23,
     "Image": "https://media.istockphoto.com/id/1421613320/photo/smiling-man-working-over-the-laptop-typing-on-the-keyboard-being-at-the-home-office.jpg?s=1024x1024&w=is&k=20&c=3nkOe34zNUkQbG1s97wphyuhSaDDstoDlM3LBYAxgjc=",
     "Name": "Christopher Lee",
     "Email": "christopher.lee@example.com",
@@ -178,6 +189,7 @@
     "category":"instructor"
   },
   {
+    "id":24,
     "Image": "https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=1024x1024&w=is&k=20&c=fRiq_aLd5eX7bjr9Y0umM-b0kIxYDewARvO_9Ykqayc=",
     "Name": "Sarah Taylor",
     "Email": "sarah.taylor@example.com",
@@ -186,6 +198,7 @@
     "category":"instructor"
   },
   {
+    "id":25,
     "Image": "https://media.istockphoto.com/id/1443876461/photo/software-designer-speaking-to-his-client-on-the-phone-in-an-office.jpg?s=1024x1024&w=is&k=20&c=521SMO2d5jgEu2jUrIqDbsQPiZfUdSqUPorXheth-yg=",
     "Name": "Daniel Miller",
     "Email": "daniel.miller@example.com",
@@ -194,6 +207,7 @@
     "category":"instructor"
   },
   {
+    "id":26,
     "Image": "https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.jpg?s=1024x1024&w=is&k=20&c=1dZ1ef9TiOn8PHaQlcWXcZOXTYDmoBZNYOi2s9xE7H4=",
     "Name": "Olivia Brown",
     "Email": "olivia.brown@example.com",
@@ -202,6 +216,7 @@
     "category":"instructor"
   },
   {
+    "id":27,
     "Image": "https://media.istockphoto.com/id/1404485065/photo/middle-age-caucasian-man-smiling-confident-drinking-coffee-at-home.jpg?s=1024x1024&w=is&k=20&c=YgAvh2DQ-d-Q0ASxErxF70JrqZDSVnuh4qnKUHHSUoI=",
     "Name": "Matthew Taylor",
     "Email": "matthew.taylor@example.com",
@@ -210,11 +225,66 @@
     "category":"instructor"
   },
   {
+    "id":28,
     "Image": "https://media.istockphoto.com/id/1413764599/photo/successful-business-man-looking-at-camera-in-office.jpg?s=1024x1024&w=is&k=20&c=GxN94J4eLfueORqhCuK_PR5GLttVLVjoBufZ4UEIkbU=",
     "Name": "Ava Martinez",
     "Email": "ava.martinez@example.com",
     "classes": 2,
     "take_classes": ["Football", "Archery"],
     "category":"instructor"
+  },
+  {
+    "id": 29,
+    "image": "https://media.istockphoto.com/id/1419288169/photo/football-training-camp-football-soccer-children-training-class-kids-practicing-football-on.jpg?s=1024x1024&w=is&k=20&c=pgUwNeD03_G5jtzII1WStjADsKjiZZPzQUKboGpZr2k=",
+    "name": "Beginner's Football",
+    "instructor_name": "John Smith",
+    "available_seats": 10,
+    "price": 50,
+    "category":"classes"
+  },
+  {
+    "id": 30,
+    "image": "https://media.istockphoto.com/id/519893464/photo/portrait-of-a-little-archer-girl.jpg?s=1024x1024&w=is&k=20&c=Yi0q4uJEorrVCpmcq2RaGIecdflS-w6Mz5iqzLulkOo=",
+    "name": "Archery Basics",
+    "instructor_name": "Michael Davis",
+    "available_seats": 6,
+    "price": 40,
+    "category":"classes"
+  },
+  {
+    "id": 31,
+    "image": "https://media.istockphoto.com/id/1394669788/photo/summertime.jpg?s=1024x1024&w=is&k=20&c=-OkMAjK8ZmV9RyOfiLeS5dCDuzOyn-_8A9creBshqkY=",
+    "name": "Learn to Swim",
+    "instructor_name": "David Thompson",
+    "available_seats": 12,
+    "price": 60,
+    "category":"classes"
+  },
+  {
+    "id": 32,
+    "image": "https://media.istockphoto.com/id/1288847505/photo/confident-boy-wearing-cricket-helmet-and-ready-for-playing.jpg?s=1024x1024&w=is&k=20&c=c3Puv0VLmdQLeFmb-XKBzSeQJ9svdn54mEMpxTVLJfg=",
+    "name": "Cricket Basics",
+    "instructor_name": "Robert Clark",
+    "available_seats": 10,
+    "price": 50,
+    "category":"classes"
+  },
+  {
+    "id": 33,
+    "image": "https://media.istockphoto.com/id/1317534403/photo/kids-doing-exercises-climbing-tightrope-in-gym-at-kindergarten-or-elementary-school-children.jpg?s=1024x1024&w=is&k=20&c=Er-W54Ny4F2rtUQDC4EZuwwzgaF1Z2XiTrOr1YQeiWs=",
+    "name": "Introduction to Gymnastics",
+    "instructor_name": "Daniel Martinez",
+    "available_seats": 8,
+    "price": 70,
+    "category":"classes"
+  },
+  {
+    "id": 34,
+    "image": "https://media.istockphoto.com/id/820930290/photo/blocking.jpg?s=1024x1024&w=is&k=20&c=kpzNrqw_dJgO_GdnTxv1u4SWM2wdAuwcU0mhu2lriFk=",
+    "name": "Karate Fundamentals",
+    "instructor_name": "William Lee",
+    "available_seats": 10,
+    "price": 55,
+    "category":"classes"
   }
 ]
