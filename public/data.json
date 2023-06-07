@@ -100,5 +100,41 @@
     "experience": "4 years",
     "category": "Instructor",
     "totalStudents": 90
+  },
+  {
+    "name": "John Smith",
+    "rating": 5,
+    "description": "The school sports academy has been instrumental in developing my skills as an athlete. The coaches are knowledgeable and supportive, and the facilities are top-notch. I highly recommend it!",
+    "category": "testimonials"
+  },
+  {
+    "name": "Emily Johnson",
+    "rating": 4,
+    "description": "Attending the school sports academy has been an incredible experience. The training programs are intense but rewarding. The academy has helped me improve my performance and achieve my goals.",
+    "category": "testimonials"
+  },
+  {
+    "name": "Michael Anderson",
+    "rating": 4.5,
+    "description": "I have had the privilege of being part of the school sports academy for the past two years, and it has been transformative. The coaches push me to my limits and help me reach new heights. I am grateful for the opportunities it has provided me.",
+    "category": "testimonials"
+  },
+  {
+    "name": "Sarah Thompson",
+    "rating": 5,
+    "description": "Enrolling in the school sports academy was the best decision I ever made. The coaching staff is exceptional and truly cares about the athletes' development. I have seen remarkable progress in my skills and overall athleticism.",
+    "category": "testimonials"
+  },
+  {
+    "name": "David Wilson",
+    "rating": 4.5,
+    "description": "The school sports academy offers a comprehensive program that covers all aspects of sports training. The coaches focus on technique, strategy, and physical conditioning. I have gained invaluable knowledge and experience through this academy.",
+    "category": "testimonials"
+  },
+  {
+    "name": "Olivia Davis",
+    "rating": 5,
+    "description": "I owe a great deal of my success as an athlete to the school sports academy. The personalized attention and guidance from the coaches have helped me overcome challenges and achieve remarkable results. I can't thank them enough!",
+    "category": "testimonials"
   }
 ]
