@@ -136,5 +136,85 @@
     "rating": 5,
     "description": "I owe a great deal of my success as an athlete to the school sports academy. The personalized attention and guidance from the coaches have helped me overcome challenges and achieve remarkable results. I can't thank them enough!",
     "category": "testimonials"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1368477551/photo/young-smiling-athlete-in-public-park.jpg?s=1024x1024&w=is&k=20&c=gfaptwMzTgxbgEUQK7YpA81qZHu5DYJu6aWcsMKPzPo=",
+    "Name": "John Smith",
+    "Email": "john.smith@example.com",
+    "classes": 5,
+    "take_classes": ["Football", "Archery", "Swimming", "Cricket", "Karate"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1440149713/photo/black-man-tablet-and-smile-for-social-media-post-shopping-online-or-browsing-internet.jpg?s=1024x1024&w=is&k=20&c=deMApX3LFnvQvqumEv5xxPjzkZgtJe_5zIak09Bxj80=",
+    "Name": "Emily Johnson",
+    "Email": "emily.johnson@example.com",
+    "classes": 4,
+    "take_classes": ["Swimming", "Cricket", "Karate", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=1024x1024&w=is&k=20&c=jts1sdkLPskbbDU4_k56chBuOaxhqJGofM64c8VEUpM=",
+    "Name": "Michael Davis",
+    "Email": "michael.davis@example.com",
+    "classes": 6,
+    "take_classes": ["Football", "Swimming", "Cricket", "Karate", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1485546774/photo/bald-man-smiling-at-camera-standing-with-arms-crossed.jpg?s=1024x1024&w=is&k=20&c=zvw6qDmYHmIvvCbEn2ZUF0tdSbKPnEWRsVAzd9g4hCM=",
+    "Name": "Jessica Wilson",
+    "Email": "jessica.wilson@example.com",
+    "classes": 3,
+    "take_classes": ["Football", "Archery", "Swimming"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1421613320/photo/smiling-man-working-over-the-laptop-typing-on-the-keyboard-being-at-the-home-office.jpg?s=1024x1024&w=is&k=20&c=3nkOe34zNUkQbG1s97wphyuhSaDDstoDlM3LBYAxgjc=",
+    "Name": "Christopher Lee",
+    "Email": "christopher.lee@example.com",
+    "classes": 2,
+    "take_classes": ["Cricket", "Karate"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=1024x1024&w=is&k=20&c=fRiq_aLd5eX7bjr9Y0umM-b0kIxYDewARvO_9Ykqayc=",
+    "Name": "Sarah Taylor",
+    "Email": "sarah.taylor@example.com",
+    "classes": 5,
+    "take_classes": ["Football", "Archery", "Swimming", "Karate", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1443876461/photo/software-designer-speaking-to-his-client-on-the-phone-in-an-office.jpg?s=1024x1024&w=is&k=20&c=521SMO2d5jgEu2jUrIqDbsQPiZfUdSqUPorXheth-yg=",
+    "Name": "Daniel Miller",
+    "Email": "daniel.miller@example.com",
+    "classes": 4,
+    "take_classes": ["Archery", "Swimming", "Cricket", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.jpg?s=1024x1024&w=is&k=20&c=1dZ1ef9TiOn8PHaQlcWXcZOXTYDmoBZNYOi2s9xE7H4=",
+    "Name": "Olivia Brown",
+    "Email": "olivia.brown@example.com",
+    "classes": 3,
+    "take_classes": ["Football", "Karate", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1404485065/photo/middle-age-caucasian-man-smiling-confident-drinking-coffee-at-home.jpg?s=1024x1024&w=is&k=20&c=YgAvh2DQ-d-Q0ASxErxF70JrqZDSVnuh4qnKUHHSUoI=",
+    "Name": "Matthew Taylor",
+    "Email": "matthew.taylor@example.com",
+    "classes": 6,
+    "take_classes": ["Football", "Swimming", "Cricket", "Karate", "Gymnastics"],
+    "category":"instructor"
+  },
+  {
+    "Image": "https://media.istockphoto.com/id/1413764599/photo/successful-business-man-looking-at-camera-in-office.jpg?s=1024x1024&w=is&k=20&c=GxN94J4eLfueORqhCuK_PR5GLttVLVjoBufZ4UEIkbU=",
+    "Name": "Ava Martinez",
+    "Email": "ava.martinez@example.com",
+    "classes": 2,
+    "take_classes": ["Football", "Archery"],
+    "category":"instructor"
   }
 ]
