@@ -6,7 +6,7 @@ import coverChildren4 from '../../assets/istockphoto-926490058-1024x1024.jpg'
 
 const Carousel = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full mb-8">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='relative'>
 

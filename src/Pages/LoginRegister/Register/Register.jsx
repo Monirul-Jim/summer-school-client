@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 
 const Register = () => {
-    const {registerUser,updatePic } = useContext(AuthContext)
+    const { registerUser, updatePic } = useContext(AuthContext)
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState();
     const [showPassword, setShowPassword] = useState(false);
@@ -15,22 +15,31 @@ const Register = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const photoUrl=form.photoUrl.value;
+        const photoUrl = form.photoUrl.value;
         const password = form.password.value;
-        const confirmPassword=form.confirmPassword.value
+        const confirmPassword = form.confirmPassword.value
         if (password !== confirmPassword) {
             setError("Passwords do not match.");
             return;
-          }
-        
-          if (password.length < 6) {
+        }
+
+        if (password.length < 6) {
             setError("Password must be at least 6 characters long.");
             return;
-          }
-        registerUser(email, password, name,photoUrl)
+        }
+        if (!/[A-Z]/.test(password)) {
+            setError("Password must contain at least one capital letter.");
+            return;
+        }
+
+        if (!/[!@#$%^&*]/.test(password)) {
+            setError("Password must contain at least one special character.");
+            return;
+        }
+        registerUser(email, password, name, photoUrl)
             .then(result => {
                 const loggedUser = result.user
-                updatePic({displayName:name,photoURL:photoUrl})
+                updatePic({ displayName: name, photoURL: photoUrl })
                 console.log(loggedUser);
                 setSuccess('Successfully registered!');
                 form.reset()
@@ -41,8 +50,8 @@ const Register = () => {
                 setError(error.message);
             })
     }
-    
-    
+
+
     const handleCheckboxChange = () => {
         setShowPassword(!showPassword);
     };
@@ -52,20 +61,20 @@ const Register = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleRegister} className="card-body">
-                    {error && (
+                        {error && (
                             <div className="alert alert-error mb-4">{error}</div>
                         )}
                         {
                             success && (
                                 <div className="alert  alert-success mb-4">{success}</div>
-                            ) }
+                            )}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
                             <input name='name' type="text" placeholder="name" className="input input-bordered" />
                         </div>
-                       
+
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -76,19 +85,19 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Photo Url</span>
                             </label>
-                            <input  name='photoUrl' type="text" placeholder="photo url" className="input input-bordered" />
+                            <input name='photoUrl' type="text" placeholder="photo url" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input name='password' type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required/>
+                            <input name='password' type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input name='confirmPassword' type={showPassword ? "text" : "password"} placeholder="confirm password" className="input input-bordered" required/>
+                            <input name='confirmPassword' type={showPassword ? "text" : "password"} placeholder="confirm password" className="input input-bordered" required />
                         </div>
                         {/* click on show password  */}
 

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "sportName": "Football",
+    "image": "https://media.istockphoto.com/id/486401400/photo/children-chasing-soccer-ball-during-a-match.jpg?s=1024x1024&w=is&k=20&c=DEm-vQHzQTQuPYRd6K0vtL-VkLtdfR8uO2c6Fz9U_PA=",
+    "specialFeatures": "Track and field events, specialized coaching, state-of-the-art training facilities",
+    "totalStudents": 150,
+    "categoryPopularity": "Popular"
+  },
+  {
+    "id": 2,
+    "sportName": "Archery",
+    "image": "https://media.istockphoto.com/id/471176484/photo/archery.jpg?s=1024x1024&w=is&k=20&c=_wwXOsHdhhkc52VE--dGsL7P4gmE7Qv0ctqpzTJMb3o=",
+    "specialFeatures": "Experienced coaching staff, regular matches and tournaments, soccer-specific fitness training",
+    "totalStudents": 200,
+    "categoryPopularity": "Popular"
+  },
+  {
+    "id": 3,
+    "sportName": "Swimming",
+    "image": "https://media.istockphoto.com/id/1048821252/photo/splashing-kids.jpg?s=1024x1024&w=is&k=20&c=BxnxRzzYXVKW41-OGJkkeh_WicN0fdZWV2H8uX6CKN4=",
+    "specialFeatures": "Heated indoor pool, certified swim instructors",
+    "totalStudents": 100,
+    "categoryPopularity": "Popular"
+  },
+  {
+    "id": 4,
+    "sportName": "Cricket",
+    "image": "https://media.istockphoto.com/id/1437784048/photo/kids-loving-the-game-of-cricket.jpg?s=1024x1024&w=is&k=20&c=-H7hubJW4lzmlMy2VaarS6ueA8qJke42n3kctc55z-Q=",
+    "specialFeatures": "Professional coaches, indoor and outdoor courts, league participation",
+    "totalStudents": 120,
+    "categoryPopularity": "Popular"
+  },
+  {
+    "id": 5,
+    "sportName": "Karate",
+    "image":"https://media.istockphoto.com/id/1095071556/photo/martial-arts-kids.jpg?s=1024x1024&w=is&k=20&c=I0F3GzZ57COlpLw3JsvjYDejEI31mhGGfJilO0Vy46U=",
+    "specialFeatures": "Tennis academy, individual and group lessons, tournaments",
+    "totalStudents": 80,
+    "categoryPopularity": "Popular"
+  },
+  {
+    "id": 6,
+    "sportName":"Gymnastics",
+    "image": "https://media.istockphoto.com/id/536653476/photo/group-of-kids-stretching-their-legs-on-a-sports-training.jpg?s=1024x1024&w=is&k=20&c=xfL52vPQDszPx9il1tsjWQ1qEmpT0BRdYbstgCwt9Ag=",
+    "specialFeatures": "Well-equipped gymnastics facility, trained instructors, competitive programs",
+    "totalStudents": 60,
+    "categoryPopularity": "Popular"
+  }
+]
