@@ -5,7 +5,7 @@
     "image": "https://media.istockphoto.com/id/486401400/photo/children-chasing-soccer-ball-during-a-match.jpg?s=1024x1024&w=is&k=20&c=DEm-vQHzQTQuPYRd6K0vtL-VkLtdfR8uO2c6Fz9U_PA=",
     "specialFeatures": "Track and field events, specialized coaching, state-of-the-art training facilities",
     "totalStudents": 150,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "image": "https://media.istockphoto.com/id/471176484/photo/archery.jpg?s=1024x1024&w=is&k=20&c=_wwXOsHdhhkc52VE--dGsL7P4gmE7Qv0ctqpzTJMb3o=",
     "specialFeatures": "Experienced coaching staff, regular matches and tournaments, soccer-specific fitness training",
     "totalStudents": 200,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "image": "https://media.istockphoto.com/id/1048821252/photo/splashing-kids.jpg?s=1024x1024&w=is&k=20&c=BxnxRzzYXVKW41-OGJkkeh_WicN0fdZWV2H8uX6CKN4=",
     "specialFeatures": "Heated indoor pool, certified swim instructors",
     "totalStudents": 100,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
   },
   {
     "id": 4,
@@ -29,22 +29,76 @@
     "image": "https://media.istockphoto.com/id/1437784048/photo/kids-loving-the-game-of-cricket.jpg?s=1024x1024&w=is&k=20&c=-H7hubJW4lzmlMy2VaarS6ueA8qJke42n3kctc55z-Q=",
     "specialFeatures": "Professional coaches, indoor and outdoor courts, league participation",
     "totalStudents": 120,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
   },
   {
     "id": 5,
     "sportName": "Karate",
-    "image":"https://media.istockphoto.com/id/1095071556/photo/martial-arts-kids.jpg?s=1024x1024&w=is&k=20&c=I0F3GzZ57COlpLw3JsvjYDejEI31mhGGfJilO0Vy46U=",
+    "image": "https://media.istockphoto.com/id/1095071556/photo/martial-arts-kids.jpg?s=1024x1024&w=is&k=20&c=I0F3GzZ57COlpLw3JsvjYDejEI31mhGGfJilO0Vy46U=",
     "specialFeatures": "Tennis academy, individual and group lessons, tournaments",
     "totalStudents": 80,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
   },
   {
     "id": 6,
-    "sportName":"Gymnastics",
+    "sportName": "Gymnastics",
     "image": "https://media.istockphoto.com/id/536653476/photo/group-of-kids-stretching-their-legs-on-a-sports-training.jpg?s=1024x1024&w=is&k=20&c=xfL52vPQDszPx9il1tsjWQ1qEmpT0BRdYbstgCwt9Ag=",
     "specialFeatures": "Well-equipped gymnastics facility, trained instructors, competitive programs",
     "totalStudents": 60,
-    "categoryPopularity": "Popular"
+    "category": "Popular"
+  },
+  {
+    "id": 7,
+    "image": "https://media.istockphoto.com/id/1407767814/photo/kids-of-a-soccer-team-listening-to-their-coach-sitting-together-on-a-soccer-field.jpg?s=1024x1024&w=is&k=20&c=bdJiI7Nh56vAXCHAInQ9bpGYhJRAbmhRmbyIctX35po=",
+    "teacher": "Football",
+    "instructorName": "John Doe",
+    "experience": "5 years",
+    "category": "Instructor",
+    "totalStudents": 100
+  },
+  {
+    "id": 8,
+    "image": "https://media.istockphoto.com/id/1420162845/photo/black-parent-coaching-a-childrens-archery-team.jpg?s=1024x1024&w=is&k=20&c=z04sz-ysqyQs0Uo8oTcdalQpZoLD-cnXxKh5oWRgPf0=",
+    "teacher": "Archery",
+    "instructorName": "Jane Smith",
+    "experience": "8 years",
+    "category": "Instructor",
+    "totalStudents": 80
+  },
+  {
+    "id": 9,
+    "image": "https://media.istockphoto.com/id/1389408592/photo/latin-swimming-man-trainer-talking-some-advices-to-teenagers-swimmers-students-at-the-pool-in.jpg?s=1024x1024&w=is&k=20&c=CvlW5z1oD4IlhIytKZvbXR0IcXitS7MztdnZ-tS0WCk=",
+    "teacher": "Swimming",
+    "instructorName": "David Johnson",
+    "experience": "3 years",
+    "category": "Instructor",
+    "totalStudents": 120
+  },
+  {
+    "id": 10,
+    "image": "https://media.istockphoto.com/id/1414610814/photo/cricket-father-and-daughter-working-hard-during-a-coaching-session.jpg?s=1024x1024&w=is&k=20&c=kyhaFMFua_2QQAEwy8JdsC0Teqce8Waa0YmWld4ME8o=",
+    "teacher": "Cricket",
+    "instructorName": "Emily Davis",
+    "experience": "6 years",
+    "category": "Instructor",
+    "totalStudents": 150
+  },
+  {
+    "id": 11,
+    "image": "https://media.istockphoto.com/id/1372527537/photo/shot-of-a-young-man-and-cute-little-girl-practicing-karate-in-a-studio.jpg?s=1024x1024&w=is&k=20&c=QYjXm3zNC7TwK0UU8yoDXoS_5kp1nXyu838DXI58oS0=",
+    "teacher": "Karate",
+    "instructorName": "Michael Wilson",
+    "experience": "10 years",
+    "category": "Instructor",
+    "totalStudents": 200
+  },
+  {
+    "id": 12,
+    "image": "https://media.istockphoto.com/id/497407662/photo/happy-children-doing-balance-exercises-with-their-coach.jpg?s=1024x1024&w=is&k=20&c=hxlvWypdidep7pW3pHEx2bUSTgY53wrACE8TuE2Wl2U=",
+    "teacher": "Gymnastics",
+    "instructorName": "Sarah Brown",
+    "experience": "4 years",
+    "category": "Instructor",
+    "totalStudents": 90
   }
 ]
