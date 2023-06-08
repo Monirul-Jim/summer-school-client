@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
-    const { loginUser,handleWithGoogle} = useContext(AuthContext)
+    const { loginUser} = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
     const location = useLocation()
@@ -28,16 +29,7 @@ const Login = () => {
                 console.log(error);
             })
     }
-    const loginWithGooglePopup=()=>{
-        handleWithGoogle()
-        .then(result=>{
-            // eslint-disable-next-line no-unused-vars
-            const user = result.user;
-        })
-        .catch(error=>{
-            console.log(error);
-        })
-    }
+   
     const handleCheckboxChange = () => {
         setShowPassword(!showPassword);
     };
@@ -72,7 +64,7 @@ const Login = () => {
                         </div>
                         <p>Don t have an account please ? <Link className='text-blue-800 font-semibold underline' to='/register'>Register</Link></p>
                     </form>
-                    <button onClick={loginWithGooglePopup} className="btn btn-outline btn-primary">G Login With Google</button>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
 
