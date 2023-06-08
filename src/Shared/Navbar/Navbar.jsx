@@ -15,7 +15,7 @@ const Navbar = () => {
         <li className="text-xl"><Link to='/instructor'>Instructors</Link></li>
         <li className="text-xl"><Link to='/classes'>Classes</Link></li>
         {
-            user && <li className="text-xl"><Link>Dashboard</Link></li>
+            user && <li className="text-xl"><Link to='dashboard'>Dashboard</Link></li>
         }
     </>
     return (
