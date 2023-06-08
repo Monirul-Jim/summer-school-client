@@ -1,9 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
-// import useAdmin from "../../../hooks/useAdmin/useAdmin";
+import useAdmin from "../../../hooks/useAdmin/useAdmin";
+import useCourses from "../../../hooks/useCourses/useCourses";
 
 const Dashboard = () => {
-    // const [isAdmin] = useAdmin();
-    const isAdmin=true
+    const [isAdmin] = useAdmin();
+    const [course]=useCourses()
+    // const isAdmin=true
     return (
         <div className="drawer lg:drawer-open space-x-4 mt-8">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -19,16 +21,15 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
                             <li className="text-2xl"><Link to="/dashboard/home">Admin Home</Link></li>
-                            <li  className="text-2xl"><Link to="/dashboard/my-cart"> my cart</Link></li>
-                            <li  className="text-2xl"><Link to="/dashboard/all-users"> All Users</Link></li>
+                            <li  className="text-2xl"><Link > my cart</Link></li>
+                            <li  className="text-2xl"><Link > All Users</Link></li>
                             
                         </> : <>
-                            <li  className="text-2xl"><Link to="/dashboard/home">User Home</Link></li>
-                            <li  className="text-2xl"><Link to="/dashboard/reservations"> Reservations</Link></li>
-                            <li  className="text-2xl"><Link to="/dashboard/history">Payment History</Link></li>
+                            <li  className="text-2xl"><Link >User Home</Link></li>
+                            <li  className="text-2xl"><Link>My Shop</Link></li>
                             <li  className="text-2xl">
-                                <Link to="/dashboard/mycart"> My Cart
-                                    {/* <span className="badge inl badge-secondary">+{cart?.length || 0}</span> */}
+                                <Link to="/dashboard/my-cart"> My Cart
+                                    <span className="badge inl badge-secondary">+{course?.length || 0}</span>
                                 </Link>
 
                             </li>

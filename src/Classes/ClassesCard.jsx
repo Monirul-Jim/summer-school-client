@@ -10,6 +10,7 @@ const ClassesCard = ({category}) => {
     const [, refetch] = useCourses();
     const location=useLocation()
     const navigate=useNavigate()
+    // eslint-disable-next-line no-unused-vars
     const handleAddToCart = category => {
         if(user && user?.email){
             const courseItem = {menuItemId: _id, instructor_name,name, image, price, email: user.email}

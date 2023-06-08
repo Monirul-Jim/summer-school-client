@@ -6,7 +6,6 @@ const MyCart = () => {
 
     return (
         <div>
-           <h1>this course length {course.length}</h1>
            <h1>Total Price: ${total}</h1>
         </div>
     );
