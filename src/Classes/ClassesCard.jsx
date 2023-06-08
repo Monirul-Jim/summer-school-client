@@ -2,21 +2,23 @@ import { useContext } from "react";
 import { AuthContext } from "../Shared/Providers/AuthProviders";
 import useCourses from "../hooks/useCourses/useCourses";
 import Swal from "sweetalert2";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ClassesCard = ({category}) => {
     const {image,name,instructor_name,available_seats,price, _id}=category
     const {user}=useContext(AuthContext)
     const [, refetch] = useCourses();
-    const handleAddToCart = item => {
-        console.log(item);
-        if(user && user.email){
-            const cartItem = {menuItemId: _id, name, image, price, email: user.email}
-            fetch('http://localhost:5000/carts', {
+    const location=useLocation()
+    const navigate=useNavigate()
+    const handleAddToCart = category => {
+        if(user && user?.email){
+            const courseItem = {menuItemId: _id, instructor_name,name, image, price, email: user.email}
+            fetch('http://localhost:5000/course', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(cartItem)
+                body: JSON.stringify(courseItem)
             })
             .then(res => res.json())
             .then(data => {
@@ -55,9 +57,9 @@ const ClassesCard = ({category}) => {
             <p className="text-2xl">Games: {name}</p>
             <p className="text-2xl">Available Seats:{available_seats}</p>
             <p>Price: ${price}</p>
-            <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-            </div>
+            <div className="card-actions justify-center">
+                    <button onClick={() => handleAddToCart(category)} className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">Add to Cart</button>
+                </div>
         </div>
     </div>
     );

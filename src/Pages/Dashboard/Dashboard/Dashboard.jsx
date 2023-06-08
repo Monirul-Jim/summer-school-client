@@ -19,7 +19,7 @@ const Dashboard = () => {
                     {
                         isAdmin ? <>
                             <li className="text-2xl"><Link to="/dashboard/home">Admin Home</Link></li>
-                            <li  className="text-2xl"><Link to="/dashboard/addItem">  Add an Item</Link></li>
+                            <li  className="text-2xl"><Link to="/dashboard/my-cart"> my cart</Link></li>
                             <li  className="text-2xl"><Link to="/dashboard/all-users"> All Users</Link></li>
                             
                         </> : <>
