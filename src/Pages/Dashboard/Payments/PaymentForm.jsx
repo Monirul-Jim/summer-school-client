@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure";
+import { useNavigate } from "react-router-dom";
 
 const PaymentForm = ({ course, price }) => {
     const stripe = useStripe();
@@ -12,13 +13,14 @@ const PaymentForm = ({ course, price }) => {
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
+    const navigate=useNavigate()
 
 
 
 
     useEffect(() => {
         if (price > 0) {
-            axiosSecure.post('/create-payment-intent', { price })
+            axiosSecure.post('/create-payment', { price })
                 .then(res => {
                     console.log(res.data.clientSecret)
                     setClientSecret(res.data.clientSecret);
@@ -91,9 +93,7 @@ const PaymentForm = ({ course, price }) => {
             axiosSecure.post('/payments', payment)
                 .then(res => {
                     console.log(res.data);
-                    if (res.data.result.insertedId) {
-                        // display confirm
-                    }
+                    navigate('/dashboard/my-cart')
                 })
         }
 
