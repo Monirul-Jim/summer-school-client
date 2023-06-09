@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import useCourses from "../../hooks/useCourses/useCourses";
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    const [course] = useCourses()
     const handleLogout = () => {
         logOut()
             .then(() => { })
@@ -15,7 +17,9 @@ const Navbar = () => {
         <li className="text-xl"><Link to='/instructor'>Instructors</Link></li>
         <li className="text-xl"><Link to='/classes'>Classes</Link></li>
         {
-            user && <li className="text-xl"><Link to='dashboard'>Dashboard</Link></li>
+            user && <li className="text-xl"><Link to='dashboard'>Dashboard
+                <div className="badge badge-secondary">+{course?.length || 0}</div>
+            </Link></li>
         }
     </>
     return (

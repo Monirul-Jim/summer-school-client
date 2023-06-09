@@ -22,7 +22,7 @@ const Dashboard = () => {
                         isAdmin ? <>
                             <li className="text-2xl"><Link to="/dashboard/home">Admin Home</Link></li>
                             <li  className="text-2xl"><Link > my cart</Link></li>
-                            <li  className="text-2xl"><Link > All Users</Link></li>
+                            <li  className="text-2xl"><Link to='all-users'> All Users</Link></li>
                             
                         </> : <>
                             <li  className="text-2xl"><Link >User Home</Link></li>

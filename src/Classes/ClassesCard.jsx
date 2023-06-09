@@ -59,7 +59,7 @@ const ClassesCard = ({category}) => {
             <p className="text-2xl">Available Seats:{available_seats}</p>
             <p>Price: ${price}</p>
             <div className="card-actions justify-center">
-                    <button onClick={() => handleAddToCart(category)} className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">Add to Cart</button>
+                    <button onClick={() => handleAddToCart(category)} className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4">Select</button>
                 </div>
         </div>
     </div>

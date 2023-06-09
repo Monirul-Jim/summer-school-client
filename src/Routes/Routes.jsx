@@ -9,47 +9,48 @@ import Classes from "../Classes/Classes";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
+import AdminRoutes from "./AdminRoutes";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children:[
-        {
-            path:'/',
-            element:<Home></Home>
-        },
-        {
-          path:'/instructor',
-          element:<PrivateRoutes><Instructor></Instructor></PrivateRoutes>
-        },
-        {
-          path:'/classes',
-          element:<PrivateRoutes><Classes></Classes></PrivateRoutes>
-        },
-        {
-          path:'/login',
-          element:<Login></Login>
-        },
-        {
-          path:'/register',
-          element:<Register></Register>
-        }
-      ]
-    },
-    {
-      path:'dashboard',
-      element:<PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
-      children:[
-        {
-          path:'all-users',
-          element:<AllUsers></AllUsers>
-        },
-        {
-          path:'my-cart',
-          element:<MyCart></MyCart>
-        }
-      ]
-    }
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/instructor',
+        element: <Instructor></Instructor>
+      },
+      {
+        path: '/classes',
+        element:<Classes></Classes>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      }
+    ]
+  },
+  {
+    path: 'dashboard',
+    element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
+    children: [
+      {
+        path: 'all-users',
+        element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
+      },
+      {
+        path: 'my-cart',
+        element: <MyCart></MyCart>
+      }
+    ]
+  }
+]);
 export default router;
