@@ -88,7 +88,11 @@ const PaymentForm = ({ course, price }) => {
                 cartItems: course.map(item => item._id),
                 menuItems: course.map(item => item.menuItemId),
                 status: 'service pending',
-                itemNames: course.map(item => item.name)
+                itemNames: course.map(item => item.name),
+                instructor_name: course.map(item => item.instructor_name),
+                available_seats: course.map(item => item.available_seats),
+                name:course.map(item => item.name),
+                image:course.map(item => item.image),
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {

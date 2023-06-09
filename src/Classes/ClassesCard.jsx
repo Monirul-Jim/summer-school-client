@@ -15,7 +15,7 @@ const ClassesCard = ({ category }) => {
     // eslint-disable-next-line no-unused-vars
     const handleAddToCart = category => {
         if (user && user?.email) {
-            const courseItem = { menuItemId: _id, instructor_name, name, image, price, email: user.email }
+            const courseItem = { menuItemId: _id, instructor_name,available_seats, name, image, price, email: user.email }
             fetch('http://localhost:5000/course', {
                 method: 'POST',
                 headers: {
