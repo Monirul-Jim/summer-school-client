@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import useCourses from "../../../hooks/useCourses/useCourses";
 
 const MyCart = () => {
@@ -5,34 +6,34 @@ const MyCart = () => {
     const total=course.reduce((total,item)=>item.price+total,0)
 
 
-    // const handleDelete = item => {
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to revert this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, delete it!'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-    //             fetch(`http://localhost:5000/carts/${item._id}`, {
-    //                 method: 'DELETE'
-    //             })
-    //                 .then(res => res.json())
-    //                 .then(data => {
-    //                     if (data.deletedCount > 0) {
-    //                         refetch();
-    //                         Swal.fire(
-    //                             'Deleted!',
-    //                             'Your file has been deleted.',
-    //                             'success'
-    //                         )
-    //                     }
-    //                 })
-    //         }
-    //     })
-    // }
+    const handleDeleteCourse = item => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/course/${item._id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
     return (
         <div>
            <h1>Total Price: ${total}</h1>
@@ -68,7 +69,7 @@ const MyCart = () => {
                                 </td>
                                 <td className="text-end">${item.price}</td>
                                 <td>
-                                    {/* <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button> */}
+                                    <button onClick={() => handleDeleteCourse(item)} className="btn btn-ghost bg-red-600  text-white">Delete</button>
                                 </td>
                             </tr>)
                         }
