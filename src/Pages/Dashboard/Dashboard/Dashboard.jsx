@@ -26,9 +26,9 @@ const Dashboard = () => {
                             
                         </> : <>
                             <li  className="text-2xl"><Link >User Home</Link></li>
-                            <li  className="text-2xl"><Link to='my-classes'>My Classes</Link></li>
+                            <li  className="text-2xl"><Link to='my-classes'>Enrolled Classes</Link></li>
                             <li  className="text-2xl">
-                                <Link to="/dashboard/my-cart"> My Cart
+                                <Link to="/dashboard/my-cart">Classes
                                     <span className="badge inl badge-secondary">+{course?.length || 0}</span>
                                 </Link>
 
