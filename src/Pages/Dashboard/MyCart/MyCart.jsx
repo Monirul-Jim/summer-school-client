@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useCourses from "../../../hooks/useCourses/useCourses";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
     const [course, refetch] = useCourses();
@@ -78,6 +79,7 @@ const MyCart = () => {
                     </tbody>
                 </table>
             </div>
+           <Link to='/dashboard/payments'><button className=" btn btn-primary w-full mb-8"> Payment</button></Link>
         </div>
     );
 };

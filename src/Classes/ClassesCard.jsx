@@ -28,7 +28,7 @@ const ClassesCard = ({category}) => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: 'Food added on the cart.',
+                        title: 'course added on your dashboard',
                         showConfirmButton: false,
                         timer: 1500
                       })

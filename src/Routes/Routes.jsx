@@ -10,6 +10,8 @@ import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import AdminRoutes from "./AdminRoutes";
+import MyClasses from "../Pages/Dashboard/Dashboard/MyClasses/MyClasses";
+import Payments from "../Pages/Dashboard/Payments/Payments";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
       {
         path: 'my-cart',
         element: <MyCart></MyCart>
+      },
+      {
+        path:'my-classes',
+        element:<MyClasses></MyClasses>
+      },
+      {
+        path:'payments',
+        element:<Payments></Payments>
       }
     ]
   }
