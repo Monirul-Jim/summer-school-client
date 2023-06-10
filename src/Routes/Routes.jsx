@@ -12,6 +12,7 @@ import MyCart from "../Pages/Dashboard/MyCart/MyCart";
 import AdminRoutes from "./AdminRoutes";
 import MyClasses from "../Pages/Dashboard/Dashboard/MyClasses/MyClasses";
 import Payments from "../Pages/Dashboard/Payments/Payments";
+import AddClasses from "../Pages/Dashboard/Instructor/AddClasses/AddClasses";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path:'payments',
         element:<Payments></Payments>
+      },
+      {
+        path:'add-classes',
+        element:<AddClasses></AddClasses>
       }
     ]
   }

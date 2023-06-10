@@ -18,7 +18,7 @@ const Dashboard = () => {
             <div className="drawer-side bg-[#D1A054]">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
-                    {isAdmin && (
+                    {/* {isAdmin && (
                         <>
                             <li className="text-2xl"><Link to="/dashboard/home">Admin Home</Link></li>
                             <li className="text-2xl"><Link>My Cart</Link></li>
@@ -46,57 +46,55 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                         </>
-                    )}
+                    )} */}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    {/* {
-                        isAdmin ? <>
-                            <li className="text-2xl"><Link to="/dashboard/home">Admin Home</Link></li>
-                            <li  className="text-2xl"><Link > my cart</Link></li>
-                            <li  className="text-2xl"><Link to='all-users'> All Users</Link></li>
-                            
-                        </> : <>
-                            <li  className="text-2xl"><Link >User Home</Link></li>
-                            <li  className="text-2xl"><Link to='my-classes'>Enrolled Classes</Link></li>
-                            <li  className="text-2xl">
-                                <Link to="/dashboard/my-cart">Classes
-                                    <span className="badge inl badge-secondary">+{course?.length || 0}</span>
-                                </Link>
-
+                    {isAdmin ? (
+                        <>
+                            <li className="text-2xl">
+                                <Link to="/dashboard/home">Admin Home</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link>My Cart</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link to="all-users">All Users</Link>
                             </li>
                         </>
-                    } */}
+                    ) : isInstructor ? (
+                        <>
+                            <li className="text-2xl">
+                                <Link to="/dashboard/instructor">Instructor Home</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link to="add-classes">AddClasses</Link>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li className="text-2xl">
+                                <Link to="/dashboard/user">User Home</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link to="my-classes">Enrolled Classes</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link to="/dashboard/my-cart">
+                                    Classes
+                                    <span className="badge inl badge-secondary">+{course?.length || 0}</span>
+                                </Link>
+                            </li>
+                        </>
+                    )}
+                <div className="divider"></div>
+                <li className="text-2xl"><Link to="/">Home</Link> </li>
+                <li className="text-2xl"><Link to="/classes">Classes</Link></li>
+            </ul>
 
-
-
-
-                    <div className="divider"></div>
-                    <li className="text-2xl"><Link to="/">Home</Link> </li>
-                    <li className="text-2xl"><Link to="/classes">Classes</Link></li>
-                </ul>
-
-            </div>
         </div>
+        </div >
     );
 };
 

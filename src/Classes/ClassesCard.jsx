@@ -4,9 +4,11 @@ import useCourses from "../hooks/useCourses/useCourses";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin/useAdmin";
+import useInstructor from "../hooks/useInstructor/useInstructor";
 
 const ClassesCard = ({ category }) => {
     const [isAdmin] = useAdmin()
+    const [isInstructor] = useInstructor()
     const { image, name, instructor_name, available_seats, price, _id } = category
     const { user } = useContext(AuthContext)
     const [, refetch] = useCourses();
@@ -15,7 +17,7 @@ const ClassesCard = ({ category }) => {
     // eslint-disable-next-line no-unused-vars
     const handleAddToCart = category => {
         if (user && user?.email) {
-            const courseItem = { menuItemId: _id, instructor_name,available_seats, name, image, price, email: user.email }
+            const courseItem = { menuItemId: _id, instructor_name, available_seats, name, image, price, email: user.email }
             fetch('http://localhost:5000/course', {
                 method: 'POST',
                 headers: {
@@ -61,8 +63,16 @@ const ClassesCard = ({ category }) => {
                 <p className="text-2xl">Available Seats:{available_seats}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions justify-center">
+                    <button
+                        disabled={isAdmin || isInstructor}
+                        onClick={() => handleAddToCart(category)}
+                        className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4"
+                    >
+                        Select
+                    </button>
 
-                    {isAdmin ? (
+
+                    {/* {isAdmin ? (
                         <button
                             disabled
                             className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4"
@@ -76,7 +86,7 @@ const ClassesCard = ({ category }) => {
                         >
                             Select
                         </button>
-                    )}
+                    )} */}
                 </div>
             </div>
         </div>
