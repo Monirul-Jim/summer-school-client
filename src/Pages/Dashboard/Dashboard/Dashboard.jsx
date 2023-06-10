@@ -15,7 +15,7 @@ const Dashboard = () => {
                 <Outlet></Outlet>
 
             </div>
-            <div className="drawer-side bg-[#D1A054]">
+            <div className="drawer-side bg-[#6e668e]">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
                     {/* {isAdmin && (
@@ -70,6 +70,9 @@ const Dashboard = () => {
                             </li>
                             <li className="text-2xl">
                                 <Link to="add-classes">AddClasses</Link>
+                            </li>
+                            <li className="text-2xl">
+                                <Link to="instructor-classes">My Classes</Link>
                             </li>
                         </>
                     ) : (

@@ -18,6 +18,7 @@ const ClassesCard = ({ category }) => {
     const handleAddToCart = category => {
         if (user && user?.email) {
             const courseItem = { menuItemId: _id, instructor_name, available_seats, name, image, price, email: user.email }
+            console.log(courseItem);
             fetch('http://localhost:5000/course', {
                 method: 'POST',
                 headers: {

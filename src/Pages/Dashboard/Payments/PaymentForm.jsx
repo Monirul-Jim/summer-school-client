@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const PaymentForm = ({ course, price }) => {
     const stripe = useStripe();
@@ -96,7 +97,13 @@ const PaymentForm = ({ course, price }) => {
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
-                    console.log(res.data);
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'payment successful',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
                     navigate('/dashboard/my-cart')
                 })
         }
