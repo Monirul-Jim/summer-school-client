@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MyCart = () => {
     const [course, refetch] = useCourses();
-    const total=course.reduce((total,item)=>item.price+total,0)
+    const total = course.reduce((total, item) => item.price + total, 0)
 
 
     const handleDeleteCourse = item => {
@@ -37,16 +37,17 @@ const MyCart = () => {
     }
     return (
         <div>
-           <h1>Total Price: ${total}</h1>
-           <div className="overflow-x-auto w-full">
+            <h1>Total Price: ${total}</h1>
+            <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Food</th>
-                            <th>Item Name</th>
+                            <th>Sports</th>
+                            <th>Sports Name</th>
                             <th>Price</th>
+                            <th>Payments</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -69,8 +70,11 @@ const MyCart = () => {
                                     {item.name}
                                 </td>
                                 <td className="text-end">${item.price}</td>
+                                <td className="text-end">
+                                    <Link to={`/dashboard/payments/${item._id}`}><button className=" btn btn-sm btn-primary"> Payment</button></Link>
+                                </td>
                                 <td>
-                                    <button onClick={() => handleDeleteCourse(item)} className="btn btn-ghost bg-red-600  text-white">Delete</button>
+                                <button onClick={() => handleDeleteCourse(item)} className="btn btn-ghost btn-sm bg-red-600  text-white">Delete</button>
                                 </td>
                             </tr>)
                         }
@@ -79,7 +83,6 @@ const MyCart = () => {
                     </tbody>
                 </table>
             </div>
-           <Link to='/dashboard/payments'><button className=" btn btn-primary w-full mb-8"> Payment</button></Link>
         </div>
     );
 };

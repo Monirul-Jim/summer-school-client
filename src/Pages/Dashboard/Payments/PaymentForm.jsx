@@ -14,16 +14,15 @@ const PaymentForm = ({ course, price }) => {
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
 
 
 
     useEffect(() => {
         if (price > 0) {
-            axiosSecure.post('/create-payment', { price })
+            axiosSecure.post(`/create-payment/${course._id}`, { price })
                 .then(res => {
-                    console.log(res.data.clientSecret)
                     setClientSecret(res.data.clientSecret);
                 })
         }
@@ -85,25 +84,40 @@ const PaymentForm = ({ course, price }) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
-                quantity: course.length,
-                cartItems: course.map(item => item._id),
-                menuItems: course.map(item => item.menuItemId),
-                status: 'service pending',
-                itemNames: course.map(item => item.name),
-                instructor_name: course.map(item => item.instructor_name),
-                available_seats: course.map(item => item.available_seats),
-                name:course.map(item => item.name),
-                image:course.map(item => item.image),
+                quantity: 1, // Single class payment
+                cartItems: [course._id],
+                menuItems: [course.menuItemId],
+                status: "service pending",
+                itemNames: [course.name],
+                instructor_name: [course.instructor_name],
+                available_seats: [course.available_seats],
+                name: [course.name],
+                image: [course.image],
+                // email: user?.email,
+                // transactionId: paymentIntent.id,
+                // price,
+                // date: new Date(),
+                // quantity: course.length,
+                // cartItems: course.map(item => item._id),
+                // menuItems: course.map(item => item.menuItemId),
+                // status: 'service pending',
+                // itemNames: course.map(item => item.name),
+                // instructor_name: course.map(item => item.instructor_name),
+                // available_seats: course.map(item => item.available_seats),
+                // name:course.map(item => item.name),
+                // image:course.map(item => item.image),
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'payment successful',
-                        showConfirmButton: false,
-                        timer: 1500
-                      })
+                    if (res.data.result.insertedId) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'payment successful',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
                     navigate('/dashboard/my-cart')
                 })
         }
@@ -112,7 +126,7 @@ const PaymentForm = ({ course, price }) => {
     }
     return (
         <>
-        <h1>Your Total Cost: ${price}</h1>
+            <h1>Your Total Cost: ${price}</h1>
             <form className="w-2/3 m-8" onSubmit={handleSubmit}>
                 <CardElement
                     options={{

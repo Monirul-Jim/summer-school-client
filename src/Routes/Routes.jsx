@@ -14,6 +14,7 @@ import MyClasses from "../Pages/Dashboard/Dashboard/MyClasses/MyClasses";
 import Payments from "../Pages/Dashboard/Payments/Payments";
 import AddClasses from "../Pages/Dashboard/Instructor/AddClasses/AddClasses";
 import InstructorClass from "../Pages/Dashboard/Instructor/InstructorClass/InstructorClass";
+import ApprovedClass from "../Pages/Dashboard/ApprovedClass/ApprovedClass";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
       },
       {
+        path:'approved-classes',
+        element:<ApprovedClass></ApprovedClass>
+      },
+      {
         path: 'my-cart',
         element: <MyCart></MyCart>
       },
@@ -59,7 +64,7 @@ const router = createBrowserRouter([
         element:<MyClasses></MyClasses>
       },
       {
-        path:'payments',
+        path:'payments/:id',
         element:<Payments></Payments>
       },
       {

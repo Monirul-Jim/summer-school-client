@@ -57,7 +57,7 @@ const Dashboard = () => {
                                 <Link to="/dashboard/home">Admin Home</Link>
                             </li>
                             <li className="text-2xl">
-                                <Link>My Cart</Link>
+                                <Link to='approved-classes'>Approved Classes</Link>
                             </li>
                             <li className="text-2xl">
                                 <Link to="all-users">All Users</Link>

@@ -12,7 +12,7 @@ const InstructorClass = () => {
         return res.data;
     })
     return (
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {
             addClasses.map(item=><InstructorClassesCard key={item._id} refetch={refetch}  item={item}></InstructorClassesCard>)
           }
