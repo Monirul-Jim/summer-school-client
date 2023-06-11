@@ -9,7 +9,7 @@ import useInstructor from "../hooks/useInstructor/useInstructor";
 const ClassesCard = ({ category }) => {
     const [isAdmin] = useAdmin()
     const [isInstructor] = useInstructor()
-    const { image, name, instructor_name, available_seats, price, _id } = category
+    const { photo, name, instructorName, available_seats, price,email,_id } = category
     const { user } = useContext(AuthContext)
     const [, refetch] = useCourses();
     const location = useLocation()
@@ -17,7 +17,7 @@ const ClassesCard = ({ category }) => {
     // eslint-disable-next-line no-unused-vars
     const handleAddToCart = category => {
         if (user && user?.email) {
-            const courseItem = { menuItemId: _id, instructor_name, available_seats, name, image, price, email: user.email }
+            const courseItem = { menuItemId: _id, instructor_name: instructorName, available_seats, name, photo, price, email: user.email }
             console.log(courseItem);
             fetch('http://localhost:5000/course', {
                 method: 'POST',
@@ -56,10 +56,11 @@ const ClassesCard = ({ category }) => {
         }
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Shoes" /></figure>
+        <div className="card dark light w-96 bg-base-100 shadow-xl">
+            <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Name:{instructor_name}</h2>
+                <h2 className="card-title">Name:{instructorName}</h2>
+                <p>Instructor Email: {email}</p>
                 <p className="text-2xl">Games: {name}</p>
                 <p className="text-2xl">Available Seats:{available_seats}</p>
                 <p>Price: ${price}</p>

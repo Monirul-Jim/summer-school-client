@@ -10,6 +10,7 @@ const useCourses = () => {
         queryKey: ['course', user?.email],
         enabled: !loading && !!user?.email && !! localStorage.getItem('access-token'),
         queryFn: async () => {
+           
             const res = await axiosSecure(`/course?email=${user?.email}`)
             return res.data;
         },

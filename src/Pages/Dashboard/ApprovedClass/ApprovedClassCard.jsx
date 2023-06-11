@@ -55,7 +55,7 @@ const ApprovedClassCard = ({ item }) => {
 
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card dark light w-96 bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Instructor Name:{instructorName}</h2>

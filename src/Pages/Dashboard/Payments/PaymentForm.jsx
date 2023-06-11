@@ -21,7 +21,7 @@ const PaymentForm = ({ course, price }) => {
 
     useEffect(() => {
         if (price > 0) {
-            axiosSecure.post(`/create-payment/${course._id}`, { price })
+            axiosSecure.post('/create-payment', { price })
                 .then(res => {
                     setClientSecret(res.data.clientSecret);
                 })

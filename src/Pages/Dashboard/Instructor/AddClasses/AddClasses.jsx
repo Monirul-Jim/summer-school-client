@@ -11,8 +11,8 @@ const AddClasses = () => {
         const name = form.name.value
         const instructorName =  user ? user.displayName : form.instructorName.value
         const email = user ? user.email : form.email.value;
-        const price = form.price.value
-        const available_seats = form.seats.value
+        const price = parseFloat(form.price.value)
+        const available_seats = parseInt(form.seats.value)
         const addClasses = { photo, name, instructorName, email, price, available_seats}
         fetch('http://localhost:5000/addClasses', {
             method: "POST",

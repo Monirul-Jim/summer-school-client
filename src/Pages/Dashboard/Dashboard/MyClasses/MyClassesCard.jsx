@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 const MyClassesCard = ({ item ,refetch}) => {
-    const {image,name,email}=item
+    const {image,email}=item
     const handleDeleteCourse = item => {
         Swal.fire({
             title: 'Are you sure?',
@@ -32,7 +32,7 @@ const MyClassesCard = ({ item ,refetch}) => {
     }
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card dark light w-96 bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{email}</h2>

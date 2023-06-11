@@ -150,7 +150,7 @@ Show all approved classes on this page. Each Class will have the following:
 
 <br/>
 
-10.  **Instructor Dashboard:**
+10.  **Instructor Dashboard:**{done}
     <br/>
     ***It will be private & only an instructor can access this route.***
       
@@ -219,15 +219,15 @@ Show all approved classes on this page. Each Class will have the following:
     - Used packages/ technology name
     - Live site link
 
-3. Implementing a dark/light theme toggle for the home page. It's optional to implement the theme toggle for the entire website\.
+3. Implementing a dark/light theme toggle for the home page. It's optional to implement the theme toggle for the entire website\.{done}
 
 4. Make the home page responsive. If possible, Make your entire website responsive\. (It is ok if the table is not responsive\.) 
 
-5. Use tanstack query (react-query) in at least two places. If needed, you can use it everywhere. 
+5. Use tanstack query (react-query) in at least two places. If needed, you can use it everywhere. {done}
 
-6. use Axios for at least two calls.
+6. use Axios for at least two calls.{done}
 
-7.  Must Use [react-hook-form](https://react-hook-form.com/) in the registration & login page. Using react hook form in another place is optional.
+7.  Must Use [react-hook-form](https://react-hook-form.com/) in the registration & login page. Using react hook form in another place is optional.{login page doing}
 
 </br>
 

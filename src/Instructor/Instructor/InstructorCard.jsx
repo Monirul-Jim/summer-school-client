@@ -2,7 +2,7 @@
 const InstructorCard = ({category}) => {
     const {Image,Name,Email,classes,take_classes}=category
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card dark light w-96 bg-base-100 shadow-xl">
             <figure><img src={Image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name:{Name}</h2>

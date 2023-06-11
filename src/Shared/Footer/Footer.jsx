@@ -2,7 +2,7 @@ import logo from '../../assets/school.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer dark p-10 bg-base-200 text-base-content">
                 <div>
                    <img src={logo} className='w-28' alt="" />
                     <p>Sports academies School<br />since 1992</p>
