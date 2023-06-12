@@ -2,32 +2,25 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const PaymentForm = ({ course, price }) => {
+const PaymentForm = ({course}) => {
     const stripe = useStripe();
     const elements = useElements();
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure()
     const [cardError, setCardError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
-    const navigate = useNavigate()
-
-
-
-
     useEffect(() => {
-        if (price > 0) {
-            axiosSecure.post('/create-payment', { price })
+        if (course && course.price > 0) {
+            axiosSecure.post('/create-payment',{ price: course.price })
                 .then(res => {
                     setClientSecret(res.data.clientSecret);
                 })
         }
-    }, [price, axiosSecure])
-
+    }, [course, axiosSecure])
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -82,43 +75,24 @@ const PaymentForm = ({ course, price }) => {
             const payment = {
                 email: user?.email,
                 transactionId: paymentIntent.id,
-                price,
+                price:course.price,
                 date: new Date(),
-                quantity: 1, // Single class payment
-                cartItems: [course._id],
-                menuItems: [course.menuItemId],
-                status: "service pending",
-                itemNames: [course.name],
-                instructor_name: [course.instructor_name],
-                available_seats: [course.available_seats],
-                name: [course.name],
-                image: [course.image],
-                // email: user?.email,
-                // transactionId: paymentIntent.id,
-                // price,
-                // date: new Date(),
-                // quantity: course.length,
-                // cartItems: course.map(item => item._id),
-                // menuItems: course.map(item => item.menuItemId),
-                // status: 'service pending',
-                // itemNames: course.map(item => item.name),
-                // instructor_name: course.map(item => item.instructor_name),
-                // available_seats: course.map(item => item.available_seats),
-                // name:course.map(item => item.name),
-                // image:course.map(item => item.image),
+                quantity: course.length,
+                cartItems: course._id,
+                menuItems: course.menuItemId,
+                status: 'service pending',
+                itemNames: course.name
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
-                    if (res.data.result.insertedId) {
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'payment successful',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
+                    console.log(res.data);
+                    if (res.data.insertResult.insertedId) {
+                        Swal.fire(
+                            'The Internet?',
+                            'That thing is still around?',
+                            'question'
+                        )
                     }
-                    navigate('/dashboard/my-cart')
                 })
         }
 
@@ -126,7 +100,7 @@ const PaymentForm = ({ course, price }) => {
     }
     return (
         <>
-            <h1>Your Total Cost: ${price}</h1>
+            <h1>Your Total Cost: ${course.price}</h1>
             <form className="w-2/3 m-8" onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -155,3 +129,16 @@ const PaymentForm = ({ course, price }) => {
 };
 
 export default PaymentForm;
+// email: user?.email,
+//             transactionId: paymentMethod.id,
+//             price: course.price,
+//             date: new Date(),
+//             quantity: 1,
+//             cartItems: [id],
+//             menuItems: [course.menuItemId],
+//             status: 'service pending',
+//             itemNames: [course.name],
+//             instructor_name: [course.instructor_name],
+//             available_seats: [course.available_seats],
+//             name: [course.name],
+//             image: [course.image]

@@ -1,10 +1,11 @@
 import { useRef} from "react";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
 
 
 const InstructorClassesCard = ({ item }) => {
-    const { photo, name, instructorName, available_seats, email, price, status } = item
+    const { photo, name, instructorName, available_seats, email, price, status,_id } = item
 
     const [axiosSecure] = useAxiosSecure()
     const modalRef = useRef(null);
@@ -56,7 +57,11 @@ const InstructorClassesCard = ({ item }) => {
                 </div>
                 <button className="btn btn-primary" >Enroll Student</button>
                 <button onClick={openModal} className="btn btn-primary" >See FeedBack </button>
-                <button className="btn btn-primary" >Update </button>
+                {status === 'denied' ? (
+                  <button className="btn btn-primary w-full" disabled> Update</button>):
+                  ( <Link to={`/dashboard/update-class/${_id}`} id={_id} ><button className="btn btn-primary w-full" disabled={status === 'denied'}>Update </button></Link>)}
+                {/* <Link to={`/dashboard/update-class/${_id}`} ><button className="btn btn-primary" disabled={status === 'denied'}>Update </button></Link> */}
+             
                 
             </div>
         </div>

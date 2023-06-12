@@ -16,6 +16,7 @@ import AddClasses from "../Pages/Dashboard/Instructor/AddClasses/AddClasses";
 import InstructorClass from "../Pages/Dashboard/Instructor/InstructorClass/InstructorClass";
 import ApprovedClass from "../Pages/Dashboard/ApprovedClass/ApprovedClass";
 import Error from "../Shared/Error/Error";
+import UpdateInstructorClass from "../Pages/Dashboard/Instructor/InstructorClass/UpdateInstructorClass/UpdateInstructorClass";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path:'add-classes',
         element:<AddClasses></AddClasses>
+      },
+      {
+        path:'update-class/:id',
+        element:<UpdateInstructorClass></UpdateInstructorClass>
       },
       {
         path:'instructor-classes',
