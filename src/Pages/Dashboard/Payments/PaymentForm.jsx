@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Shared/Providers/AuthProviders";
 import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const PaymentForm = ({course}) => {
     const stripe = useStripe();
@@ -13,6 +14,7 @@ const PaymentForm = ({course}) => {
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
+    const navigate=useNavigate()
     useEffect(() => {
         if (course && course.price > 0) {
             axiosSecure.post('/create-payment',{ price: course.price })
@@ -80,20 +82,21 @@ const PaymentForm = ({course}) => {
                 quantity: course.length,
                 cartItems: course._id,
                 menuItems: course.menuItemId,
-                status: 'service pending',
+                photo:course.photo,
+                status: 'enroll',
                 itemNames: course.name
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
-                    console.log(res.data);
                     if (res.data.insertResult.insertedId) {
                         Swal.fire(
-                            'The Internet?',
-                            'That thing is still around?',
-                            'question'
-                        )
+                            'Payment successful!',
+                            'Go to enroll classes to see your course',
+                            'success'
+                          )
                     }
                 })
+                navigate('/dashboard/my-cart')
         }
 
 

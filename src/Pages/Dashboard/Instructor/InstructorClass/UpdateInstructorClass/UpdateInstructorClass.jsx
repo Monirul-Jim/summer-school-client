@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../../../../Shared/Providers/AuthProviders";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../../hooks/useAxiosSecure/useAxiosSecure";
+import { useParams } from "react-router-dom";
 
-const UpdateInstructorClass = ({_id}) => {
+const UpdateInstructorClass = () => {
     const { user } = useContext(AuthContext)
     const [axiosSecure]=useAxiosSecure()
+    const {id}=useParams()
    
     const handleUpdateClasses = (event) => {
         event.preventDefault()
@@ -19,7 +21,7 @@ const UpdateInstructorClass = ({_id}) => {
         const updateClasses = { photo, name, instructorName, email, price, available_seats }
 
         axiosSecure
-            .put(`/update-class/${_id}`, updateClasses) // Use the put() method of axiosSecure to send the PUT request
+            .put(`/update-class/${id}`, updateClasses) // Use the put() method of axiosSecure to send the PUT request
             .then((response) => {
                 if (response.data.insertedId) {
                     form.reset();
@@ -79,7 +81,7 @@ const UpdateInstructorClass = ({_id}) => {
                         <input type="text" name='price' placeholder="price" className="input input-bordered w-full max-w-xs" required />
                     </div>
                 </div>
-                <input type="submit" className='btn btn-block mt-4' value="Add Toy" />
+                <input type="submit" className='btn btn-block btn-primary mt-4' value="Update Class" />
             </form>
         </div>
     );

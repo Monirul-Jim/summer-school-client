@@ -10,8 +10,6 @@ const Classes = () => {
         return res.data;
     })
     const approvedClasses = approvedClass.filter(classItem => classItem.status === 'approved');
-    // const [menu] = UseMenu()
-    // const classes = menu.filter(item => item.category === 'classes')
     return (
         <div className="mt-4">
             <h1 className="text-3xl text-center mb-8">Our Popular Classes you find here</h1>
