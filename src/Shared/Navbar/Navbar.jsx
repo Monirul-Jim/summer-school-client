@@ -56,7 +56,7 @@ const Navbar = ({toggleTheme}) => {
                         {navOptions}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="flex justify-end">
                     {
                         user && <img title={user?.displayName} className='h-12 w-12 rounded-full' src={user?.photoURL} alt="Profile Picture" />
                     }

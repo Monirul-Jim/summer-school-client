@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../../../hooks/useAdmin/useAdmin";
 import useCourses from "../../../hooks/useCourses/useCourses";
 import useInstructor from "../../../hooks/useInstructor/useInstructor";
+import { FaAddressBook, FaHome, FaMarker, FaUsers } from 'react-icons/fa';
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
@@ -54,22 +55,22 @@ const Dashboard = () => {
                     {isAdmin ? (
                         <>
                             <li className="text-2xl">
-                                <Link to="/dashboard/home">Admin Home</Link>
+                                <Link to="/dashboard/home"><FaHome></FaHome> Admin Home</Link>
                             </li>
                             <li className="text-2xl">
-                                <Link to='approved-classes'>Approved Classes</Link>
+                                <Link to='approved-classes'><FaMarker></FaMarker>Approved Classes</Link>
                             </li>
                             <li className="text-2xl">
-                                <Link to="all-users">All Users</Link>
+                                <Link to="all-users"><FaUsers></FaUsers>All Users</Link>
                             </li>
                         </>
                     ) : isInstructor ? (
                         <>
                             <li className="text-2xl">
-                                <Link to="/dashboard/instructor">Instructor Home</Link>
+                                <Link to="/dashboard/instructor"><FaHome></FaHome> Instructor Home</Link>
                             </li>
                             <li className="text-2xl">
-                                <Link to="add-classes">AddClasses</Link>
+                                <Link to="add-classes"><FaAddressBook></FaAddressBook> AddClasses</Link>
                             </li>
                             <li className="text-2xl">
                                 <Link to="instructor-classes">My Classes</Link>
@@ -78,7 +79,7 @@ const Dashboard = () => {
                     ) : (
                         <>
                             <li className="text-2xl">
-                                <Link to="/dashboard/user">User Home</Link>
+                                <Link to="/dashboard/user"><FaHome></FaHome> User Home</Link>
                             </li>
                             <li className="text-2xl">
                                 <Link to="my-classes">Enrolled Classes</Link>
