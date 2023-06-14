@@ -16,7 +16,14 @@ const ClassesCard = ({ category }) => {
     const navigate = useNavigate()
     // eslint-disable-next-line no-unused-vars
     const handleAddToCart = category => {
-        if (user && user?.email) {
+        if (available_seats === 0) {
+            Swal.fire({
+                title: 'No seats available',
+                text: 'There are no seats available for this course.',
+                icon: 'info',
+                confirmButtonText: 'OK'
+            }) }
+       else if (user && user?.email) {
             const courseItem = { menuItemId: _id, instructor_name: instructorName, available_seats, name, photo, price, email: user.email }
             console.log(courseItem);
             fetch('http://localhost:5000/course', {
@@ -56,7 +63,8 @@ const ClassesCard = ({ category }) => {
         }
     }
     return (
-        <div className="card dark light w-96 bg-base-100 shadow-xl">
+        // <div className="card dark light w-96 bg-base-100 shadow-xl">
+        <div className={`card dark light w-96 ${available_seats === 0 ? 'bg-red-500' : 'bg-base-100'} shadow-xl`}>
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name:{instructorName}</h2>
