@@ -9,8 +9,8 @@ const InstructorClassesCard = ({ item }) => {
 
     const [axiosSecure] = useAxiosSecure()
     const modalRef = useRef(null);
-    const { data: feedback = []} = useQuery(['feedback'], async () => {
-        const res = await axiosSecure.get('/feedback')
+    const { data: feedback = []} = useQuery(['feedback',_id], async () => {
+        const res = await axiosSecure.get(`/feedback/${_id}`)
         return res.data;
     })
     const openModal = () => {
@@ -18,7 +18,13 @@ const InstructorClassesCard = ({ item }) => {
             modalRef.current.showModal();
         }
     };
-  
+    const renderFeedback = () => {
+        if (feedback.length > 0) {
+          return feedback.map((item) => <p className="text-xl" key={item._id}>{item?.name}</p>);
+        } else {
+          return <p>No feedback</p>;
+        }
+      };
     return (
         <div className="card dark light w-96 bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
@@ -47,9 +53,7 @@ const InstructorClassesCard = ({ item }) => {
                         >
                             ✕
                         </button>
-                        {
-                            feedback.map(item=><p className="text-xl" key={item._id}>{item?.name}</p>)
-                        }
+                        {renderFeedback()}
                     </form>
                 </dialog>
                 <div className="flex justify-end">

@@ -13,7 +13,7 @@ const MyClasses = () => {
     })
     return (
         <div>
-            <h1 className="mt-8">All enroll course you find here</h1>
+            <h1 className="mt-8 text-center mb-4">Enroll Course</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {
                     payments.map(item => <MyClassesCard key={item._id} refetch={refetch} item={item} ></MyClassesCard>)

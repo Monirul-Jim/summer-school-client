@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors }} = useForm();
     const { registerUser, updateUserProfile } = useContext(AuthContext)
     // const [error, setError] = useState(null);
     // const [success, setSuccess] = useState();
@@ -14,7 +14,17 @@ const Register = () => {
     // const location = useLocation()
     // const from = location.state?.from?.pathname || '/';
     const onSubmit = data => {
+        const { password, confirmPassword } = data;
 
+        if (password !== confirmPassword) {
+          Swal.fire({
+            icon: "error",
+            title: "Password does not match",
+            text: "Please make sure the passwords match.",
+          });
+          return;
+        }
+    
         registerUser (data.email, data.password)
             .then(result => {
 
@@ -24,7 +34,7 @@ const Register = () => {
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://summer-school-server-tau.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -123,6 +133,13 @@ const Register = () => {
                                 maxLength: 20,
                                 pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
                             })} placeholder="password" className="input input-bordered" />
+                              <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Confirm Password</span>
+                            </label>
+                            <input type="password"  {...register("confirmPassword", { required: true })} placeholder="confirm-password" className="input input-bordered" />
+                            {errors.photoURL && <span className="text-red-600">password does not match</span>}
+                        </div>
                             {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
                             {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
                             {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less than 20 characters</p>}

@@ -26,7 +26,7 @@ const ClassesCard = ({ category }) => {
        else if (user && user?.email) {
             const courseItem = { menuItemId: _id, instructor_name: instructorName, available_seats, name, photo, price, email: user.email }
             console.log(courseItem);
-            fetch('http://localhost:5000/course', {
+            fetch('https://summer-school-server-tau.vercel.app/course', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
