@@ -32,7 +32,7 @@ const ApprovedClassCard = ({ item }) => {
         const form=event.target;
         const name=form.name.value
         const feedback={name}
-        fetch('https://summer-school-server-tau.vercel.app/feedback', {
+        fetch('http://localhost:5000/feedback', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

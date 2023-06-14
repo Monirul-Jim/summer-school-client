@@ -18,13 +18,7 @@ const InstructorClassesCard = ({ item }) => {
             modalRef.current.showModal();
         }
     };
-    const renderFeedback = () => {
-        if (feedback.length > 0) {
-          return feedback.map((item) => <p className="text-xl" key={item._id}>{item?.name}</p>);
-        } else {
-          return <p>No feedback</p>;
-        }
-      };
+  
     return (
         <div className="card dark light w-96 bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Shoes" /></figure>
@@ -53,13 +47,15 @@ const InstructorClassesCard = ({ item }) => {
                         >
                             ✕
                         </button>
-                        {renderFeedback()}
+                        {
+                            feedback.map(item=><p className="text-xl" key={item._id}>{item?.name}</p>)
+                        }
                     </form>
                 </dialog>
                 <div className="flex justify-end">
                 {status === 'denied' && <button className="btn btn-error w-3/12">Denied</button>}
                 </div>
-                <button className="btn btn-primary" >Enroll Student</button>
+               <button  className="btn btn-primary w-full" >Enroll Student</button>
                 <button onClick={openModal} className="btn btn-primary" >See FeedBack </button>
                 {status === 'denied' ? (
                   <button className="btn btn-primary w-full" disabled> Update</button>):

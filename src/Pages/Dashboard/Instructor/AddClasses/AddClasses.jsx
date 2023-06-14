@@ -14,7 +14,7 @@ const AddClasses = () => {
         const price = parseFloat(form.price.value)
         const available_seats = parseInt(form.seats.value)
         const addClasses = { photo, name, instructorName, email, price, available_seats}
-        fetch('https://summer-school-server-tau.vercel.app/addClasses', {
+        fetch('http://localhost:5000/addClasses', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

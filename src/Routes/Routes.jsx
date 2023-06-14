@@ -17,6 +17,7 @@ import InstructorClass from "../Pages/Dashboard/Instructor/InstructorClass/Instr
 import ApprovedClass from "../Pages/Dashboard/ApprovedClass/ApprovedClass";
 import Error from "../Shared/Error/Error";
 import UpdateInstructorClass from "../Pages/Dashboard/Instructor/InstructorClass/UpdateInstructorClass/UpdateInstructorClass";
+import TotalEnrollStudent from "../Pages/Dashboard/Dashboard/TotalEnrollStudent/TotalEnrollStudent";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path:'update-class/:id',
         element:<UpdateInstructorClass></UpdateInstructorClass>
+      },
+      {
+        path:'enroll',
+        element:<TotalEnrollStudent></TotalEnrollStudent>
       },
       {
         path:'instructor-classes',
